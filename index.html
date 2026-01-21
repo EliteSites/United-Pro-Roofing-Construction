@@ -23,11 +23,78 @@
             padding: 0 20px;
         }
 
+        .top-bar {
+            background: #1e293b;
+            color: white;
+            padding: 12px 0;
+            font-size: 0.9rem;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .top-bar a:hover {
+            color: #f59e0b;
+        }
+
         header {
             background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
             color: white;
-            padding: 60px 20px 80px;
+            padding: 40px 20px 80px;
             text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 70px;
+            height: 70px;
+        }
+
+        .logo-text {
+            text-align: left;
+        }
+
+        .logo-text h1 {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.9rem;
+            opacity: 0.95;
+            font-weight: 400;
+            margin-top: 5px;
         }
 
         h1 {
@@ -58,7 +125,7 @@
 
         .badge-text {
             font-size: 0.95rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .badge-subtext {
@@ -76,14 +143,16 @@
             text-decoration: none;
             border-radius: 8px;
             margin-top: 20px;
-            transition: background 0.3s, transform 0.2s;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
             border: none;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
         }
 
         .cta-button:hover {
             background: #d97706;
             transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.5);
         }
 
         section {
@@ -95,44 +164,50 @@
             font-size: 2rem;
             margin-bottom: 40px;
             color: #1e3a8a;
+            font-weight: 700;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
         .service-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: #2563eb;
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 25px;
         }
 
         .service-card h3 {
             font-size: 1.3rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #1e3a8a;
+            font-weight: 600;
         }
 
         .service-card p {
             color: #666;
             font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         #services {
@@ -141,14 +216,23 @@
 
         .why-choose-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
             margin-top: 40px;
         }
 
         .feature {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         .feature-icon {
@@ -159,17 +243,19 @@
 
         .feature h3 {
             font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #1e3a8a;
+            font-weight: 600;
         }
 
         .feature p {
             color: #666;
             font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         #service-area {
-            background: #1e3a8a;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
             color: white;
             text-align: center;
         }
@@ -189,16 +275,18 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 30px auto 0;
             text-align: left;
         }
 
         .county-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 12px 20px;
-            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 14px 20px;
+            border-radius: 8px;
             font-size: 0.95rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
         }
 
         #contact {
@@ -206,79 +294,96 @@
         }
 
         .contact-content {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             text-align: center;
         }
 
+        .contact-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
         .phone-number {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #1e3a8a;
-            margin: 20px 0;
+            margin: 30px 0;
             display: block;
             text-decoration: none;
+            letter-spacing: 1px;
         }
 
         .phone-number:hover {
             color: #2563eb;
         }
 
-        .contact-form {
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .emergency-notice {
             background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 25px;
             margin-top: 40px;
-            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .emergency-notice h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e5e7eb;
-            border-radius: 6px;
+        .emergency-notice p {
+            color: #666;
             font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #2563eb;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
+            margin: 0;
         }
 
         footer {
             background: #1e293b;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
         }
 
         footer p {
-            margin: 5px 0;
+            margin: 8px 0;
             opacity: 0.9;
         }
 
+        footer strong {
+            font-size: 1.1rem;
+        }
+
         @media (max-width: 768px) {
+            .top-bar .container {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo-text .tagline {
+                font-size: 0.8rem;
+            }
+
             h1 {
                 font-size: 2rem;
             }
@@ -301,25 +406,29 @@
             }
 
             .phone-number {
-                font-size: 1.5rem;
-            }
-
-            .contact-form {
-                padding: 25px;
+                font-size: 1.8rem;
             }
 
             .counties-grid {
                 grid-template-columns: 1fr;
             }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
         }
 
         @media (max-width: 480px) {
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+
             h1 {
                 font-size: 1.6rem;
             }
 
             header {
-                padding: 40px 20px 60px;
+                padding: 30px 20px 60px;
             }
 
             .cta-button {
@@ -330,13 +439,56 @@
             section {
                 padding: 40px 20px;
             }
+
+            .phone-number {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-item">
+                <span>📞</span>
+                <a href="tel:+19739054151">(973) 905-4151</a>
+            </div>
+            <div class="top-bar-item">
+                <span>🕐</span>
+                <span>24/7 Emergency Service Available</span>
+            </div>
+            <div class="top-bar-item">
+                <span>📍</span>
+                <span>Serving All of New Jersey</span>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
-            <h1>United Pro Roofing & Construction</h1>
+            <div class="logo-container">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="48" fill="white" stroke="#f59e0b" stroke-width="2"/>
+                        <path d="M 50 20 L 75 40 L 75 70 L 25 70 L 25 40 Z" fill="url(#roofGradient)"/>
+                        <path d="M 50 20 L 75 40 L 70 40 L 50 25 L 30 40 L 25 40 Z" fill="#1e3a8a"/>
+                        <rect x="42" y="50" width="16" height="20" fill="#1e3a8a"/>
+                        <circle cx="50" cy="60" r="2" fill="#f59e0b"/>
+                        <rect x="30" y="45" width="8" height="8" fill="white" opacity="0.8"/>
+                        <rect x="62" y="45" width="8" height="8" fill="white" opacity="0.8"/>
+                    </svg>
+                    <div class="logo-text">
+                        <h1>UNITED PRO ROOFING<br>& CONSTRUCTION</h1>
+                        <div class="tagline">Excellence in Every Project Since 2017</div>
+                    </div>
+                </div>
+            </div>
             <div class="trust-badges">
                 <div class="badge">
                     <div class="badge-icon">⭐</div>
@@ -359,7 +511,7 @@
                     <div class="badge-subtext">Emergency Service</div>
                 </div>
             </div>
-            <a href="#contact" class="cta-button">Get Your Free Estimate Now</a>
+            <a href="tel:+19739054151" class="cta-button">Get Your Free Estimate Now</a>
         </div>
     </header>
 
@@ -368,49 +520,67 @@
             <h2 class="section-title">Complete Roofing & Construction Solutions</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Roof Replacement</h3>
-                    <p>Transform your home with a brand new roof. Premium materials, expert installation, and guaranteed results.</p>
+                    <img src="https://images.unsplash.com/photo-1632246653925-83440efb6c87?w=600&h=400&fit=crop" alt="Roof Replacement" class="service-image">
+                    <div class="service-content">
+                        <h3>Roof Replacement</h3>
+                        <p>Transform your home with a brand new roof. Premium materials, expert installation, and guaranteed results.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Roof Repair</h3>
-                    <p>Don't let leaks damage your home. Fast, reliable repairs with guaranteed workmanship.</p>
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&h=400&fit=crop" alt="Roof Repair" class="service-image">
+                    <div class="service-content">
+                        <h3>Roof Repair</h3>
+                        <p>Don't let leaks damage your home. Fast, reliable repairs with guaranteed workmanship.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">⛈️</div>
-                    <h3>Storm Damage Restoration</h3>
-                    <p>24/7 emergency response for storm damage. We work directly with your insurance company.</p>
+                    <img src="https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=600&h=400&fit=crop" alt="Storm Damage" class="service-image">
+                    <div class="service-content">
+                        <h3>Storm Damage Restoration</h3>
+                        <p>24/7 emergency response for storm damage. We work directly with your insurance company.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏗️</div>
-                    <h3>Siding Installation</h3>
-                    <p>Boost curb appeal and protect your investment with professional siding services.</p>
+                    <img src="https://images.unsplash.com/photo-1628624747186-a49e8c86372c?w=600&h=400&fit=crop" alt="Siding Installation" class="service-image">
+                    <div class="service-content">
+                        <h3>Siding Installation</h3>
+                        <p>Boost curb appeal and protect your investment with professional siding services.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💧</div>
-                    <h3>Gutter Systems</h3>
-                    <p>Protect your foundation with expertly installed and maintained gutter systems.</p>
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&h=400&fit=crop" alt="Gutter Systems" class="service-image">
+                    <div class="service-content">
+                        <h3>Gutter Systems</h3>
+                        <p>Protect your foundation with expertly installed and maintained gutter systems.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🌳</div>
-                    <h3>Landscaping</h3>
-                    <p>Beautiful, functional outdoor spaces designed and built to enhance your property.</p>
+                    <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&h=400&fit=crop" alt="Landscaping" class="service-image">
+                    <div class="service-content">
+                        <h3>Landscaping</h3>
+                        <p>Beautiful, functional outdoor spaces designed and built to enhance your property.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🧱</div>
-                    <h3>Concrete & Stone Masonry</h3>
-                    <p>Expert concrete work and stone masonry for lasting durability and aesthetic appeal.</p>
+                    <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&h=400&fit=crop" alt="Concrete & Stone Masonry" class="service-image">
+                    <div class="service-content">
+                        <h3>Concrete & Stone Masonry</h3>
+                        <p>Expert concrete work and stone masonry for lasting durability and aesthetic appeal.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🚗</div>
-                    <h3>Driveway & Walkway Paving</h3>
-                    <p>Professional paving services that add value and beauty to your property.</p>
+                    <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&h=400&fit=crop" alt="Driveway Paving" class="service-image">
+                    <div class="service-content">
+                        <h3>Driveway & Walkway Paving</h3>
+                        <p>Professional paving services that add value and beauty to your property.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🪨</div>
-                    <h3>Hardscapes & Retaining Walls</h3>
-                    <p>Custom hardscape designs including patios, outdoor steps, and structural retaining walls.</p>
+                    <img src="https://images.unsplash.com/photo-1621321462131-69e1006c2802?w=600&h=400&fit=crop" alt="Hardscapes" class="service-image">
+                    <div class="service-content">
+                        <h3>Hardscapes & Retaining Walls</h3>
+                        <p>Custom hardscape designs including patios, outdoor steps, and structural retaining walls.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -489,26 +659,15 @@
             <div class="contact-content">
                 <h2 class="section-title">Ready to Get Started? Call Now!</h2>
                 <p>Don't wait until a small problem becomes a major expense. Get your FREE estimate today and discover why hundreds of New Jersey homeowners trust United Pro Roofing & Construction.</p>
-                <a href="tel:+19739054151" class="phone-number">📞 (973) 905-4151</a>
-                <a href="tel:+19739054151" class="cta-button">Call for Immediate Service</a>
+                <a href="tel:+19739054151" class="phone-number">(973) 905-4151</a>
+                <div class="contact-buttons">
+                    <a href="tel:+19739054151" class="cta-button">Call for Immediate Service</a>
+                    <a href="tel:+19739054151" class="cta-button">Request Free Estimate</a>
+                </div>
                 
-                <div class="contact-form">
-                    <h3 style="text-align: center; margin-bottom: 20px; color: #1e3a8a;">Request Your Free Estimate Online</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">What Can We Help You With? *</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your roofing, construction, or landscaping needs..." required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button" style="width: 100%;">Get My Free Estimate</button>
-                    </form>
+                <div class="emergency-notice">
+                    <h3>🚨 Emergency Roofing Services</h3>
+                    <p>Experiencing a roofing emergency? We're available 24/7 to respond to storm damage, leaks, and urgent repairs. Call us now at <strong>(973) 905-4151</strong> for immediate assistance.</p>
                 </div>
             </div>
         </div>
@@ -516,10 +675,11 @@
 
     <footer>
         <div class="container">
-            <p><strong>United Pro Roofing & Construction</strong> | Phone: (973) 905-4151</p>
+            <p><strong>United Pro Roofing & Construction</strong></p>
+            <p>Phone: <a href="tel:+19739054151" style="color: #f59e0b; text-decoration: none;">(973) 905-4151</a></p>
             <p>Family Owned & Operated | Licensed & Insured | 24/7 Emergency Service</p>
             <p>Serving Haddonfield, NJ and All Surrounding Counties</p>
-            <p style="margin-top: 15px;">&copy; 2026 United Pro Roofing & Construction. All rights reserved.</p>
+            <p style="margin-top: 20px; font-size: 0.9rem;">&copy; 2026 United Pro Roofing & Construction. All rights reserved.</p>
         </div>
     </footer>
 </body>
