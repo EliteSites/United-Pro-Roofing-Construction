@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Pro Roofing & Construction | Professional Roofing Services in Haddonfield</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 60px 20px 80px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .badge-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .badge-subtext {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1e3a8a;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        #services {
+            background: #f8fafc;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        #service-area {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+        }
+
+        #service-area .section-title {
+            color: white;
+        }
+
+        #service-area p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .counties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 900px;
+            margin: 30px auto 0;
+            text-align: left;
+        }
+
+        .county-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        #contact {
+            background: #f8fafc;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin: 20px 0;
+            display: block;
+            text-decoration: none;
+        }
+
+        .phone-number:hover {
+            color: #2563eb;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .trust-badges {
+                gap: 20px;
+            }
+
+            .badge-text {
+                font-size: 0.9rem;
+            }
+
+            .services-grid,
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-number {
+                font-size: 1.5rem;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .counties-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            header {
+                padding: 40px 20px 60px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>United Pro Roofing & Construction</h1>
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">⭐</div>
+                    <div class="badge-text">4.9 Stars</div>
+                    <div class="badge-subtext">179 Reviews</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-text">7+ Years</div>
+                    <div class="badge-subtext">Expert Service</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">👨‍👩‍👧‍👦</div>
+                    <div class="badge-text">Family Owned</div>
+                    <div class="badge-subtext">& Operated</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🕐</div>
+                    <div class="badge-text">24/7 Available</div>
+                    <div class="badge-subtext">Emergency Service</div>
+                </div>
+            </div>
+            <a href="#contact" class="cta-button">Get Your Free Estimate Now</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Complete Roofing & Construction Solutions</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Roof Replacement</h3>
+                    <p>Transform your home with a brand new roof. Premium materials, expert installation, and guaranteed results.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Roof Repair</h3>
+                    <p>Don't let leaks damage your home. Fast, reliable repairs with guaranteed workmanship.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⛈️</div>
+                    <h3>Storm Damage Restoration</h3>
+                    <p>24/7 emergency response for storm damage. We work directly with your insurance company.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Siding Installation</h3>
+                    <p>Boost curb appeal and protect your investment with professional siding services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Gutter Systems</h3>
+                    <p>Protect your foundation with expertly installed and maintained gutter systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌳</div>
+                    <h3>Landscaping</h3>
+                    <p>Beautiful, functional outdoor spaces designed and built to enhance your property.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧱</div>
+                    <h3>Concrete & Stone Masonry</h3>
+                    <p>Expert concrete work and stone masonry for lasting durability and aesthetic appeal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Driveway & Walkway Paving</h3>
+                    <p>Professional paving services that add value and beauty to your property.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🪨</div>
+                    <h3>Hardscapes & Retaining Walls</h3>
+                    <p>Custom hardscape designs including patios, outdoor steps, and structural retaining walls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Homeowners Choose United Pro Roofing</h2>
+            <div class="why-choose-grid">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Proven Track Record</h3>
+                    <p>7+ years of excellence with hundreds of satisfied customers across New Jersey.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Values</h3>
+                    <p>Locally owned and operated. We treat your home like it's our own.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⭐</div>
+                    <h3>179 Five-Star Reviews</h3>
+                    <p>Rated 4.9 stars by real customers who trust our professional service.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>100% Free Estimates</h3>
+                    <p>No pressure, no obligations. Just honest pricing and expert advice.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Guaranteed Repairs</h3>
+                    <p>We stand behind our work with solid guarantees and warranties.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🕐</div>
+                    <h3>24/7 Emergency Service</h3>
+                    <p>Roofing emergencies don't wait. Neither do we. Call anytime, day or night.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-area">
+        <div class="container">
+            <h2 class="section-title">Serving All of New Jersey</h2>
+            <p>United Pro Roofing & Construction proudly serves Haddonfield and communities throughout New Jersey. No job is too big or too small. We're your neighbors, and we're here to help.</p>
+            <div class="counties-grid">
+                <div class="county-item">✓ Atlantic County</div>
+                <div class="county-item">✓ Bergen County</div>
+                <div class="county-item">✓ Burlington County</div>
+                <div class="county-item">✓ Camden County</div>
+                <div class="county-item">✓ Cape May County</div>
+                <div class="county-item">✓ Cumberland County</div>
+                <div class="county-item">✓ Essex County</div>
+                <div class="county-item">✓ Gloucester County</div>
+                <div class="county-item">✓ Hudson County</div>
+                <div class="county-item">✓ Hunterdon County</div>
+                <div class="county-item">✓ Mercer County</div>
+                <div class="county-item">✓ Middlesex County</div>
+                <div class="county-item">✓ Monmouth County</div>
+                <div class="county-item">✓ Morris County</div>
+                <div class="county-item">✓ Ocean County</div>
+                <div class="county-item">✓ Passaic County</div>
+                <div class="county-item">✓ Salem County</div>
+                <div class="county-item">✓ Somerset County</div>
+                <div class="county-item">✓ Sussex County</div>
+                <div class="county-item">✓ Union County</div>
+                <div class="county-item">✓ Warren County</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Ready to Get Started? Call Now!</h2>
+                <p>Don't wait until a small problem becomes a major expense. Get your FREE estimate today and discover why hundreds of New Jersey homeowners trust United Pro Roofing & Construction.</p>
+                <a href="tel:+19739054151" class="phone-number">📞 (973) 905-4151</a>
+                <a href="tel:+19739054151" class="cta-button">Call for Immediate Service</a>
+                
+                <div class="contact-form">
+                    <h3 style="text-align: center; margin-bottom: 20px; color: #1e3a8a;">Request Your Free Estimate Online</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">What Can We Help You With? *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your roofing, construction, or landscaping needs..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">Get My Free Estimate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>United Pro Roofing & Construction</strong> | Phone: (973) 905-4151</p>
+            <p>Family Owned & Operated | Licensed & Insured | 24/7 Emergency Service</p>
+            <p>Serving Haddonfield, NJ and All Surrounding Counties</p>
+            <p style="margin-top: 15px;">&copy; 2026 United Pro Roofing & Construction. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
